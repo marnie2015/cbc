@@ -13,3 +13,7 @@ nav {
 .cbc-blue {
   background-color: #0b0e3f!important;
 }
+
+.italic {
+  font-style: italic;
+}
