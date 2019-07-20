@@ -17,3 +17,8 @@ nav {
 .italic {
   font-style: italic;
 }
+
+nav ul li :hover {
+  color: #0b0e3f!important;
+  background-color: #ffff4e!important;
+}
