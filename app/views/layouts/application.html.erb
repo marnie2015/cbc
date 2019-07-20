@@ -8,39 +8,31 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+    });
+    </script>
   </head>
 
   <body>
     <nav>
       <div class="nav-wrapper">
         <a href="/" class="brand-logo c-yellow"><img src="/assets/logo.jpg" width="180px;"></a>
-        <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a class="c-yellow" href="#">HEAVEN</a></li>
           <li><a class="c-yellow" href="/contact">CONTACT US</a></li>
         </ul>
       </div>
     </nav>
-    <ul class="sidenav" id="mobile-menu">
+    <ul class="sidenav" id="mobile-demo">
       <li><a href="#">HEAVEN</a></li>
       <li><a href="/contact">CONTACT US</a></li>
     </ul>
     <%= yield %>
-    <script>
-    $(document).ready(function(){
-      $('.carousel.carousel-slider').carousel({
-        fullWidth: true,
-        indicators: true
-      });
-
-      $('.parallax').parallax();
-      $('.carousel').carousel();
-      $('.materialboxed').materialbox();
-      $('.sidenav').sidenav();
-    });
-    </script>
   </body>
 </html>
